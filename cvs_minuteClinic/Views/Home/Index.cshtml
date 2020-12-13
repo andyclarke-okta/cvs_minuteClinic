@@ -1,0 +1,69 @@
+﻿@{
+    ViewData["Title"] = "MinuteClinic";
+}
+
+    <div id="entry-box" class="rounded-6 sign-in-content">
+        <p id="demo"></p>
+        <fieldset style="display:block;">
+            <h2>CVS MinuteClinic</h2>
+            @if (User.Identity.IsAuthenticated)
+            {
+                <div class="docs-section" id="intro">
+                    <p class="lead">This is protected content of Sample Application</p>
+                    <p class="lead">Available only after successful authentication</p>
+                </div>
+            }
+            else
+            {
+                <div class="docs-section" id="intro">
+                    <p class="lead">This is Unprotected landing page of Application</p>
+                    <p class="lead">Use Login above to authenticate</p>
+                </div>
+            }
+        </fieldset>
+
+        <div>
+            <p>At CVS Health, we share a clear purpose: helping people on their path to better health. Through our health services, plans and community pharmacists, we’re pioneering a bold new approach to total health. Making quality care more affordable, accessible, simple and seamless, to not only help people get well, but help them stay well in body, mind and spirit.</p>
+        </div>
+
+
+
+        @if (User.Identity.IsAuthenticated)
+        {
+            <div>
+                <img src="~/img/minuteClinic_intro.png" />
+            </div>
+        }
+
+    <div class="card-group">
+        <div class="card">
+            <img src="~/img/female-doctor-posing-in-her-office.jpg" class="card-img-top" alt="Commercial">
+            <div class="card-body">
+                <h5 class="card-title">In-Person Visit</h5>
+                <p class="card-text">  </p>
+                @*<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>*@
+            </div>
+        </div>
+        <div class="card">
+            <img src="~/img/health-i.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Insurance</h5>
+                <p class="card-text"></p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="~/img/telemed-1.png" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Telehealth Visit</h5>
+                <p class="card-text">  </p>
+
+            </div>
+        </div>
+
+    </div>
+            <br />
+            <br />
+            <br />
+            <br />
+        </div>
